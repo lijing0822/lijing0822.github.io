@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox布局练习</title>
+	<style>
+        body{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: flex-start;
+            padding:10px;
+        }
+        div{
+            width:150px;
+            margin:10px auto;
+            border: 2px solid #f00;
+            
+        }
+        .one{
+            height:120px;
+        }
+        .two{
+            height:100px;
+        }
+        .three{
+            height:40px;
+        }
+        .four{
+            height:200px;
+            border: 2px solid #0f0;
+        }
+        @media screen and (max-width:640px){
+            body{
+                align-items: flex-start;
+            }
+            div{
+                margin:3px;
+            }
+            .four{
+                order:-1;
+            }
+        }
+    </style>
+
+</head>
+<body>
+	<div class="one"></div>
+	<div class="two"></div>
+	<div class="three"></div>
+	<div class="four"></div>
+</body>
+</html>
